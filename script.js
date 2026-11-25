@@ -93,6 +93,6 @@ function showPetMessage(message) {
 function calculateTreat() {
   var baseBonus = 10;
   var bonusFromInput = "5";
-  var totalBonus = baseBonus + bonusFromInput;
+  var totalBonus = baseBonus + Number(bonusFromInput);
   return totalBonus;
 }
