@@ -19,7 +19,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     function clickedTreatButton() {
         pet_info.happiness += 10; // Treats make the pet happier
         pet_info.weight += 2; // Treats make Mookie heavier
-        pet_info.energy += 10; // Treats also give Mookie energy
+        pet_info.energy += calculateTreat(); // Treats also give Mookie energy
         showPetMessage("More please!");
       checkAndUpdatePetInfoInHtml();
     }
@@ -90,3 +90,9 @@ function showPetMessage(message) {
     }, 2000);
 }
   
+function calculateTreat() {
+  var baseBonus = 10;
+  var bonusFromInput = "5";
+  var totalBonus = baseBonus + bonusFromInput;
+  return totalBonus;
+}
