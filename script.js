@@ -17,9 +17,9 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     var pet_info = {name:"Momo", weight: 20, happiness: 1000, energy: 100};
   
     function clickedTreatButton() {
-        pet_info.happiness += 10; // Treats make the pet happier
+        pet_info.energy += calculateTreat(); // Treats make the pet happier
         pet_info.weight += 2; // Treats make Mookie heavier
-        pet_info.energy += calculateTreat(); // Treats also give Mookie energy
+        pet_info.energy += 10; // Treats also give Mookie energy
         showPetMessage("More please!");
       checkAndUpdatePetInfoInHtml();
     }
